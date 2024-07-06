@@ -14,7 +14,9 @@
     ],
     "functions": {
         "src/utils/ocrService.js": {
-            "includeFiles": "node_modules/tesseract.js-core/*"
+            "includeFiles": "node_modules/tesseract.js-core/tesseract-core-simd.wasm",
+            "memory": 1024,
+            "maxDuration": 10
         }
     }
 }
