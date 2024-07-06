@@ -34,4 +34,4 @@ The project is divided into two main parts:
 
    ```bash
    git clone https://github.com/hafiza2601/image-to-text.git
-   cd your-repo
+   cd image-to-text
