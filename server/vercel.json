@@ -11,5 +11,10 @@
             "src": "/(.*)",
             "dest": "src/index.js"
         }
-    ]
+    ],
+    "functions": {
+        "src/utils/ocrService.js": {
+            "includeFiles": "node_modules/tesseract.js-core/*"
+        }
+    }
 }
