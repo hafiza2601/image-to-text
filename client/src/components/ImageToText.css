@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    color: #009578;
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    color: #009578;
+}
+
+.box {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 800px;
+    height: 500px;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+}
+
+.drop-zone {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #cccccc;
+    border: 4px dashed #009578;
+    border-radius: 10px;
+    transition: border-style 0.3s;
+    box-sizing: border-box;
+    /* Ensure padding is included in height */
+}
+
+.drop-zone--over {
+    border-style: solid;
+}
+
+.drop-zone.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.drop-zone__input {
+    display: none;
+}
+
+.drop-zone__thumb {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-area .fa-upload {
+    margin-bottom: 10px;
+}
+
+.upload-area .drop-zone__prompt {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.text-container {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 45px 10px 45px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
