@@ -1,8 +1,10 @@
-import Tesseract from 'tesseract.js';
+import { createWorker } from 'tesseract.js';
 
 export const extractTextAndBoldWords = async (imageBuffer) => {
     try {
-        const { data: { text } } = await Tesseract.recognize(imageBuffer, 'eng');
+        const worker = await createWorker('eng');
+        const { data: { text } } = await worker.recognize(imageBuffer);
+        await worker.terminate();
         return { extractedText: text };
     } catch (error) {
         console.error('OCR extraction error:', error);
