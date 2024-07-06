@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extented: false, limit: "16kb" }))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+app.get('/', (req, res) => {
+    res.json("Hello from Image to text")
+})
+
 // routes import
 import ocrRouter from './routes/ocr.routes.js'
 
